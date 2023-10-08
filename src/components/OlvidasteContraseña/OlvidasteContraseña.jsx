@@ -1,13 +1,19 @@
+import '../css/background.css'
+
 function OlvidasteContraseña(){
     return <div>
         
         <link rel="stylesheet" href="index.css" />
   <title>HASH TECHIE OFFICIAL</title>
-  <section>
-    <div className="form-box2">
+  <section> 
+    <div className='container'>
+      <div className='row'>
+      <div classNameName="col-md-8">
+        <h2>Olvidaste Contraseña</h2> 
+        <div className="form-box2 ">
       <div className="form-value">
         <form action="">
-          <h2>Olvidaste Contraseña</h2>
+          
           <div className="inputbox">
             <ion-icon name="mail-outline" />
             <input type="email" required="" />
@@ -32,6 +38,10 @@ function OlvidasteContraseña(){
           </div>
         </form>
       </div>
+      </div>
+    </div>
+        </div>
+    
     </div>
   </section>
     </div>
