@@ -1,10 +1,10 @@
 import React from 'react';
 import NavBar from "./navbar";
 import Fechas from './fechas';
-
+import '../css/estiloHomepage.css'
 import imagen from '../assets/img/IMG ESTADISTICAS.jpeg'
 
-function HomePage(){
+function HomePage() {
     const containerStyle = {
         display: 'flex',
         alignItems: 'center', // Alinea verticalmente al centro
@@ -17,7 +17,7 @@ function HomePage(){
         paddingRight: '50px',
     };
 
-    const textoUser  ={
+    const textoUser = {
         color: 'turquoise'
     }
     const lineaDivisoria = {
@@ -34,9 +34,9 @@ function HomePage(){
             <div style={containerStyle}>
                 <div>
                     <h1 style={titleStyle}>GoodMorning</h1>
-                    <h1 style={{...titleStyle,...textoUser}}>User</h1>
+                    <h1 style={{ ...titleStyle, ...textoUser }}>User</h1>
                 </div>
-                <Fechas/>
+                <Fechas />
             </div>
             <div style={containerStyle}>
                 <div>
@@ -44,12 +44,12 @@ function HomePage(){
                     <h1 style={titleStyle}>Estado de las especies </h1>
                 </div>
                 <div style={lineaDivisoria}></div>
-                
+
             </div>
             <div style={containerStyle}>
-                <img src={imagen} alt="Descripción de la imagen" style={{ maxWidth: '300px' }}/>
+                <img src={imagen} alt="Descripción de la imagen" style={{ maxWidth: '300px' }} />
             </div>
-            
+
 
         </div>
     );

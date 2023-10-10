@@ -4,19 +4,22 @@
     padding: 0;
     font-family: 'poppins',sans-serif;
 }
-section{
+.section_login{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
+    background-image: url('/src/components/assets/img/background6.jpg'); /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta de tu imagen de fondo */
+    background-size: cover; /* Para que la imagen de fondo cubra toda la pantalla */
+    background-repeat: no-repeat;
     
-    background: url('/src/components/assets/img/background6.jpg')no-repeat;
-    background-position: center;
-    background-size: cover;
 }
+
+   
+
 .form-box{
-    position: relative;
+    position: center;
     width: 400px;
     height: 450px;
     background: rgba(32,138,161,0.5);
@@ -30,8 +33,8 @@ section{
 }
 .form-box2{
     position: relative;
-    width: 400px;
-    height: 450px;
+    width: 600px;
+    height: 350px;
     background: rgb(218, 224, 224);
     border: 2px solid rgba(32,138,161,0.5);
     border-radius: 20px;
@@ -102,11 +105,12 @@ top: -5px;
 .forget label a:hover{
     text-decoration: underline;
 }
-button{
+.btn_login{
     width: 100%;
     height: 40px;
     border-radius: 40px;
     background: #fff;
+    color: black;
     border: none;
     outline: none;
     cursor: pointer;

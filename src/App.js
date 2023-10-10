@@ -9,6 +9,7 @@ import Login from './components/Logear_usuario/login'
 import Register from './components/Registrar/register'
 import Pastel from './components/pruebapaste/integracionpastel'
 import OlvidasteContraseña from './components/OlvidasteContraseña/OlvidasteContraseña'
+import HomePage from './components/HomePage/homepage';
 
 const App = () => {
   return(
@@ -18,6 +19,7 @@ const App = () => {
     <Route path='/register/' element={<Register/>}/>
     <Route path='/pastel' element={<Pastel/>}/>
     <Route path='/olvidasteContraseña/' element={<OlvidasteContraseña/>}/>
+    <Route path='/homepage/' element={<HomePage/>}/>
   </Routes>
   </Router>
   )
