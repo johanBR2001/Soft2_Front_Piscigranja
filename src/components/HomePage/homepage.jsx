@@ -3,7 +3,7 @@ import NavBar from "./navbar";
 import Fechas from './fechas';
 import '../css/estiloHomepage.css'
 import imagen from '../assets/img/IMG ESTADISTICAS.jpeg'
-
+import LinesChart from './LinesChart';
 function HomePage() {
     const containerStyle = {
         display: 'flex',
@@ -46,10 +46,11 @@ function HomePage() {
                 <div style={lineaDivisoria}></div>
 
             </div>
-            <div style={containerStyle}>
+            <div style={ {...containerStyle,maxWidth: '700px' }}>
                 <img src={imagen} alt="Descripción de la imagen" style={{ maxWidth: '300px' }} />
+           
+                <LinesChart />
             </div>
-
 
         </div>
     );
