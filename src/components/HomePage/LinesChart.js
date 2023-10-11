@@ -24,21 +24,21 @@ ChartJS.register(
 );
 
 var beneficios = [0, 56, 20, 36, 80, 40, 30, -20, 25, 30, 12, 60];
-var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+var meses = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"];
 
 var midata = {
     labels: meses,
     datasets: [ // Cada una de las líneas del gráfico
         {
-            label: 'Beneficios',
+            label: 'Semana',
             data: beneficios,
             tension: 0.5,
             fill : true,
-            borderColor: 'rgb(255, 99, 132)',
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            borderColor: 'rgba(55, 155, 177, 0.53)',
+            backgroundColor: 'rgba(122, 204, 222, 0.53)',
             pointRadius: 5,
-            pointBorderColor: 'rgba(255, 99, 132)',
-            pointBackgroundColor: 'rgba(255, 99, 132)',
+            pointBorderColor: 'rgba(122, 204, 222, 0.53)',
+            pointBackgroundColor: 'rgba(55, 155, 177, 0.53)',
         },
         {
             label: 'Otra línea',
@@ -53,7 +53,7 @@ var misoptions = {
             min : 0
         },
         x: {
-            ticks: { color: 'rgb(255, 99, 132)'}
+            ticks: { color: 'rgba(55, 155, 177, 0.53)'}
         }
     }
 };

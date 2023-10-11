@@ -27,9 +27,9 @@ function EstadGeneral (){
                 <div id='graphPolar' >
                     <ChartPolar />
                 </div>
-                <div class="box">
+                {/* <div class="box">
                     <div class="rectangle" />
-                </div>
+                </div> */}
             </div>
            
         
