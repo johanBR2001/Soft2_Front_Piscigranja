@@ -21,6 +21,7 @@ const App = () => {
     <Route path='/olvidasteContraseña/' element={<OlvidasteContraseña/>}/>
     <Route path='/CodOlviContra' element={<CodOlviContra/>}/>
     <Route path='/homepage/' element={<HomePage/>}/>
+    <Route path='/estadisticas/' element={<EstadGeneral/>}/>
   </Routes>
   </Router>
   )
