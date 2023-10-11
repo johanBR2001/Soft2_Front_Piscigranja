@@ -1,41 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ChartPolar } from './ChartPolar';
+import LinesChart from '../HomePage/LinesChart';
 import '../css/estiloChartPolar.css';
 import NavBar from '../HomePage/navbar.jsx';
-import LinesChart from './LinesChart';
 
 function EstadGeneral (){
-    const containerStyle2 = {
-        display: 'flex',
-        alignItems: 'center', // Alinea verticalmente al centro
-        padding: '50px', // Espaciado alrededor del contenido
-        // justifyContent: 'space-between',
+    const [activeTab, setActiveTab] = useState("tab1");
+    //  Funciones para realizar el cambio de tabs
+    const handleTab1 = () => {
+        // actualizar el estado a tab1
+        setActiveTab("tab1");
     };
-    const titleStyle = {
-        paddingLeft: '10px',
-        paddingRight: '100px',
+    const handleTab2 = () => {
+        // actualizar el estado a tab2
+        setActiveTab("tab2");
     };
+
+    // Controla el estado del interruptor
+    const [switchState, setSwitchState] = useState(false);
+
+    const handleSwitchChange = () => {
+        // Invierte el estado del interruptor cuando cambia
+        setSwitchState(!switchState);
+
+        // Aquí puedes definir la acción que deseas realizar cuando el interruptor cambia de estado
+        if (switchState) {
+            // Acción cuando el interruptor está en estado ON
+            setActiveTab("tab1");
+        } else {
+            // Acción cuando el interruptor está en estado OFF
+            setActiveTab("tab2");
+        }
+    };
+
     return(
-       
-        <div className="contenedor">
-            <NavBar />
-            <div className="label"style={{...containerStyle2,titleStyle}}>
-                <div>
-                    <h1 >Estadisticas Generales </h1>
-                    <h1 id='fuente'>Estado de las especies </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <NavBar />
                 </div>
-                <div  style={{maxWidth: '300px'}}>
-                    <ChartPolar />
-                </div>
-                {/* <div class="box">
-                    <div class="rectangle" />
-                </div> */}
             </div>
-            <div  style={containerStyle2}>
-                <LinesChart/>
+            <br />
+            <div class="row">
+                <div class="col align-self-center" style={{border: '2px solid #ccc',}}>
+                    <h1>Estadisticas Generales</h1>
+                    <h1 id="fuente">Estado de las especies</h1>
+                </div>
+                <div class="col-1">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                        // Controlador de eventos para el cambio de estado del interruptor
+                        onChange={handleSwitchChange}
+                        ></input>
+                        {/* <label class="form-check-label" for="flexSwitchCheckDefault">prueba</label> */}
+                    </div>
+                </div>
+                <div class="col-6" style={{border: '2px solid #ccc',maxWidth: '400px'}}>
+                    <div className='outlet'>
+                        {activeTab === "tab1" ?  <ChartPolar /> : <LinesChart />}
+                    </div>
+                </div>
             </div>
         </div>
-
     );
 }
 
