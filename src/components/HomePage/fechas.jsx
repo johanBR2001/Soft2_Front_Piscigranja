@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Fechas(){
+function Fechas() {
 
     return (
         <div className="container nav justify-content-end">

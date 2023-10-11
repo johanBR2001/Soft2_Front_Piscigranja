@@ -2,8 +2,8 @@ import React from 'react';
 import { ChartPolar } from './ChartPolar';
 import '../css/estiloChartPolar.css';
 import NavBar from '../HomePage/navbar.jsx';
-import Toggle from './ToggleSwitch';
-import ToggleSwitch from './ToggleSwitch';
+// import Toggle from './ToggleSwitch';
+// import ToggleSwitch from './ToggleSwitch';
 function EstadGeneral (){
     const containerStyle2 = {
         display: 'flex',
@@ -32,7 +32,6 @@ function EstadGeneral (){
                 </div>
             </div>
            
-            <ToggleSwitch/>
         
         </div>
         

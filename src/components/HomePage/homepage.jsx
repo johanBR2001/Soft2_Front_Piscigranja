@@ -46,9 +46,9 @@ function HomePage() {
                 <div style={lineaDivisoria}></div>
 
             </div>
-            <div style={ {...containerStyle,maxWidth: '700px' }}>
+            <div style={{ ...containerStyle, maxWidth: '700px' }}>
                 <img src={imagen} alt="Descripción de la imagen" style={{ maxWidth: '300px' }} />
-           
+
                 <LinesChart />
             </div>
 

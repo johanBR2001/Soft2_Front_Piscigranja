@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
+import '../css/estiloRegister.css'
 function MainPage() {
   return <div>
 
     <link rel="stylesheet" href="index.css" />
     <title>AAA</title>
-    <section>
+    <section className="section_register">
       <div className="form-box">
         <div className="form-value">
           <form action="">
@@ -12,9 +13,19 @@ function MainPage() {
             <div className="inputbox">
               <ion-icon name="mail-outline" />
               <input type="email" required="" />
-              <label htmlFor="">Email</label>
+              <label htmlFor="">Nombre</label>
             </div>
             <div className="inputbox">
+              <ion-icon name="mail-outline" />
+              <input type="email" required="" />
+              <label htmlFor="">Apellido</label>
+            </div>
+            <div className="inputbox">
+              <ion-icon name="mail-outline" />
+              <input type="email" required="" />
+              <label htmlFor="">Email</label>
+            </div>
+            <div className="inputbox">  
               <ion-icon name="lock-closed-outline" />
               <input type="password" required="" />
               <label htmlFor="">Password</label>
@@ -25,7 +36,7 @@ function MainPage() {
                 Remember Me <a href="#">Forget Password</a>
               </label>
             </div>
-            <button>Log in</button>
+            <button className="btn_register">Log in</button>
             <div className="register">
               <p>
                 Already have an account? <a href="/login">Login</a>
