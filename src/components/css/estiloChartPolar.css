@@ -36,3 +36,7 @@
   padding-right: 50px;
   position: fixed;
 }
+
+#label{
+  top: 20px;
+}
