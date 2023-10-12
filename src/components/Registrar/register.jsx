@@ -6,7 +6,7 @@ function MainPage() {
     <link rel="stylesheet" href="index.css" />
     <title>AAA</title>
     <section className="section_register">
-      <div className="form-box">
+      <div className="form-box-register">
         <div className="form-value">
           <form action="">
             <h2>Register</h2>
