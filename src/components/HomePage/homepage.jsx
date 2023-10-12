@@ -3,7 +3,7 @@ import NavBar from '../NavBar/navbar';
 import Fechas from './fechas';
 import '../css/estiloHomepage.css'
 import imagen from '../assets/img/IMG ESTADISTICAS.jpeg'
-import LinesChart from './LinesChart';
+import LinesChart from '../Charts/LinesChart';
 function HomePage() {
     const containerStyle = {
         display: 'flex',

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ChartPolar } from './ChartPolar';
-import LinesChart from '../HomePage/LinesChart';
+import { ChartPolar } from '../Charts/ChartPolar';
+import LinesChart from '../Charts/LinesChart';
 import '../css/estiloChartPolar.css';
 import NavBar from '../NavBar/navbar';
 
