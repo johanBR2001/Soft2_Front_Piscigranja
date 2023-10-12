@@ -46,7 +46,7 @@ function EstadGeneral (){
                     <h1>Estadisticas Generales</h1>
                     <h1 id="fuente">Estado de las especies</h1>
                 </div>
-                <div class="col-1">
+                <div class="col-1 align-self-center">
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
                         // Controlador de eventos para el cambio de estado del interruptor
@@ -55,7 +55,7 @@ function EstadGeneral (){
                         {/* <label class="form-check-label" for="flexSwitchCheckDefault">prueba</label> */}
                     </div>
                 </div>
-                <div class="col-6" style={{border: '2px solid #ccc',maxWidth: '400px'}}>
+                <div class="col-6" style={{border: '2px solid #ccc',maxWidth: '400px', minHeight: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                     <div className='outlet'>
                         {activeTab === "tab1" ?  <ChartPolar /> : <LinesChart />}
                     </div>

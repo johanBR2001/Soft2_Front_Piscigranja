@@ -23,7 +23,7 @@ ChartJS.register(
     Filler
 );
 
-var beneficios = [0, 56, 20, 36, 80, 40, 30, -20, 25, 30, 12, 60];
+var beneficios = [0, 56, 20, 36, 80];
 var meses = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"];
 
 var midata = {
@@ -42,7 +42,7 @@ var midata = {
         },
         {
             label: 'Otra línea',
-            data: [20, 25, 60, 65, 45, 10, 0, 25, 35, 7, 20, 25]
+            data: [20, 25, 60, 65, 45]
         },
     ],
 };
