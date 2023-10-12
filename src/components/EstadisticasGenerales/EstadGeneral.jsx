@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChartPolar } from './ChartPolar';
 import LinesChart from '../HomePage/LinesChart';
 import '../css/estiloChartPolar.css';
-import NavBar from '../HomePage/navbar.jsx';
+import NavBar from '../NavBar/navbar';
 
 function EstadGeneral (){
     const [activeTab, setActiveTab] = useState("tab1");

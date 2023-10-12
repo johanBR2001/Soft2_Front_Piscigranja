@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from "./navbar";
+import NavBar from '../NavBar/navbar';
 import Fechas from './fechas';
 import '../css/estiloHomepage.css'
 import imagen from '../assets/img/IMG ESTADISTICAS.jpeg'
