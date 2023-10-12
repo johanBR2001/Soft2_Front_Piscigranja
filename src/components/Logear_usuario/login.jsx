@@ -1,7 +1,7 @@
 import '../css/estiloLogin.css'
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-function MainPage() {
+function Login() {
   const navigate = useNavigate()
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -75,4 +75,4 @@ function MainPage() {
   </div>
 }
 
-export default MainPage
+export default Login
