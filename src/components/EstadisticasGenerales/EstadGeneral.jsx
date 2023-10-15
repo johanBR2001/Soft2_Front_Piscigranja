@@ -4,7 +4,7 @@ import LinesChart from '../Charts/LinesChart';
 import '../css/estiloChartPolar.css';
 import NavBar from '../NavBar/navbar';
 
-function EstadGeneral (){
+function EstadGeneral() {
     const [activeTab, setActiveTab] = useState("tab1");
     //  Funciones para realizar el cambio de tabs
     const handleTab1 = () => {
@@ -33,7 +33,7 @@ function EstadGeneral (){
         }
     };
 
-    return(
+    return (
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -41,24 +41,30 @@ function EstadGeneral (){
                 </div>
             </div>
             <br />
-            <div class="row">
-                <div class="col align-self-center" style={{border: '2px solid #ccc',}}>
-                    <h1>Estadisticas Generales</h1>
-                    <h1 id="fuente">Estado de las especies</h1>
-                </div>
-                <div class="col-1 align-self-center">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                        // Controlador de eventos para el cambio de estado del interruptor
-                        onChange={handleSwitchChange}
-                        ></input>
-                        {/* <label class="form-check-label" for="flexSwitchCheckDefault">prueba</label> */}
+            <div class="row" style={{ height: "fit-content", border: '2px solid #ccc' }}>
+                <div class="col-lg-6 col-md-5 align-self-center">
+                    <div class="container pt-4" >
+                        <h1>Estadisticas Generales</h1>
+                        <h1 id="fuente">Estado de las especies</h1>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                                // Controlador de eventos para el cambio de estado del interruptor
+                                onChange={handleSwitchChange}
+                            ></input>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6" style={{border: '2px solid #ccc',maxWidth: '400px', minHeight: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <div class="col-lg-6 col-md-7 justify-content-center align-items-center" style={{ border: '2px solid #ccc', minHeight:"400px", minWidth:"400px", display: 'flex', justifyContent: 'center !important', alignItems: 'center !important' }}>
                     <div className='outlet'>
-                        {activeTab === "tab1" ?  <ChartPolar /> : <LinesChart />}
+                        {activeTab === "tab1" ? <ChartPolar /> : <LinesChart />}
                     </div>
+                </div>
+            </div>
+            <div class="row" style={{ border: '2px solid #ccc' }}>
+                <div class="">
+                    HOLA
                 </div>
             </div>
         </div>
