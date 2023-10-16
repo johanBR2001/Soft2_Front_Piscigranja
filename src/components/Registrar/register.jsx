@@ -12,7 +12,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://restaurantes20194359.azurewebsites.net/backend/loginrestaurante", {
+      const response = await fetch("http://127.0.0.1:8000/backend/register/", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
