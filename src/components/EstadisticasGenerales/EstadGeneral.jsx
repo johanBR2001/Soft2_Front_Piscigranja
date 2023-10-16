@@ -41,7 +41,7 @@ function EstadGeneral() {
                 </div>
             </div>
             <br />
-            <div class="row" style={{ height: "fit-content", border: '2px solid #ccc' }}>
+            <div class="row" style={{ height: "fit-content"}}>
                 <div class="col-lg-6 col-md-5 align-self-center">
                     <div class="container pt-4" >
                         <h1>Estadisticas Generales</h1>
@@ -56,17 +56,13 @@ function EstadGeneral() {
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-7 justify-content-center align-items-center" style={{ border: '2px solid #ccc', minHeight:"400px", minWidth:"400px", display: 'flex', justifyContent: 'center !important', alignItems: 'center !important' }}>
+                <div class="col-lg-6 col-md-7 justify-content-center align-items-center" style={{ minHeight:"400px", minWidth:"400px", display: 'flex', justifyContent: 'center !important', alignItems: 'center !important' }}>
                     <div className='outlet'>
                         {activeTab === "tab1" ? <ChartPolar /> : <LinesChart />}
                     </div>
                 </div>
             </div>
-            <div class="row" style={{ border: '2px solid #ccc' }}>
-                <div class="">
-                    HOLA
-                </div>
-            </div>
+            
         </div>
     );
 }

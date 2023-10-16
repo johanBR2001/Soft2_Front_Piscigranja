@@ -9,7 +9,6 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      //const response = await fetch("https://restaurantes20194359.azurewebsites.net/backend/loginrestaurante", {
       const response = await fetch("http://127.0.0.1:8000/backend/login/", {
       method: 'POST',
         headers: {
@@ -25,7 +24,7 @@ function Login() {
       if(data.error===""){
         const jsonData = JSON.stringify(data.restaurante);
         sessionStorage.setItem('data', jsonData);
-        navigate('/2023-0-pw-entregable-2/bienvenida');
+        navigate('/homepage');
       }
       else{
         setError("Sus credednciales son incorrectas")
