@@ -1,35 +1,48 @@
-import React from 'react';
-import {
-  Chart as ChartJS,
-  RadialLinearScale,
-  ArcElement,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-
+import React, { useEffect, useState } from 'react';
 import { PolarArea } from 'react-chartjs-2';
 
-ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
-
-export const data = {
-  labels: ['Bolsas', 'Botella', 'Envoltura', 'Tapas', 'otros'],
-  datasets: [
-    {
-      label: '#  elementos',
-      data: [12, 19, 3, 5, 3],
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.5)',
-        'rgba(54, 162, 235, 0.5)',
-        'rgba(255, 206, 86, 0.5)',
-        'rgba(75, 192, 192, 0.5)',
-        'rgba(153, 102, 255, 0.5)',
-        'rgba(255, 159, 64, 0.5)',
-      ],
-      borderWidth: 1,
-    },
-  ],
-};
-
 export function ChartPolar() {
-  return <PolarArea data={data} />;
+  const [chartData, setChartData] = useState({
+    labels: [],
+    datasets: [
+      {
+        label: '# elementos',
+        data: [],
+        backgroundColor: [],
+        borderWidth: 1,
+      },
+    ],
+  });
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch("http://127.0.0.1:8000/backend/obtener_conteo_materiales/");
+        if (response.ok) {
+          const data = await response.json();
+          const labels = data.map((item) => item.nombre);
+          const datasetData = data.map((item) => item.cantidad);
+          const backgroundColors = data.map((item, index) => `rgba(${index * 20}, 99, 132, 0.5)`);
+          
+          setChartData({
+            labels,
+            datasets: [
+              {
+                label: '# elementos',
+                data: datasetData,
+                backgroundColor: backgroundColors,
+                borderWidth: 1,
+              },
+            ],
+          });
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
+  return <PolarArea data={chartData} />;
 }
