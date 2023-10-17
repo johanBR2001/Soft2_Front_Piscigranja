@@ -37,7 +37,7 @@ function Codigo() {
             if (data.error === "") {
                 const jsonData = JSON.stringify(data.restaurante);
                 sessionStorage.setItem('data', jsonData);
-                navigate('/2023-0-pw-entregable-2/bienvenida');
+                navigate('/ResetContra');
             }
             else {
                 setError("Sus credednciales son incorrectas")

@@ -1,7 +1,41 @@
 import '../css/resetContra.css'
-
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function ResetContra(){
+  const navigate = useNavigate()
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://127.0.0.1:8000/backend/cambiar_contrasena/", {
+      method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          id: 1,
+          password: password
+        })
+      });
+      const data = await response.json();
+      console.log(data)
+      if(data.error===""){
+        const jsonData = JSON.stringify(data.restaurante);
+        sessionStorage.setItem('data', jsonData);
+        navigate('/homepage');
+      }
+      else{
+        setError("Sus credednciales son incorrectas")
+      }
+     
+      // redirigir al usuario a la página principal
+    } catch (err) {
+      console.log("no ingreso")
+      setError(err.message);
+    }
+  };
     return <div>
         
   <link rel="stylesheet" href="index.css" />
@@ -20,15 +54,17 @@ function ResetContra(){
            </p></div>
            <div id='input_resetContra'>
             <label htmlFor=""><b>Nueva contraseña</b></label>
-            <input type="email" required="" />
+            <input value={password}
+              onChange={(e) => setPassword(e.target.value)} required="" />
           </div>
           <div id='input_resetContra'>
             <label htmlFor=""><b>Ingresa nueva contraseña</b></label>
-            <input type="email" required="" />
+            <input  value={password}
+              onChange={(e) => setPassword(e.target.value)} required="" />
             
           </div>
           <div className='btn_position'>
-          <button className='btn_ResetContra'>Actualizar</button>
+          <button className='btn_ResetContra' onClick={handleSubmit}>Actualizar</button>
           </div>
           </div>
           
