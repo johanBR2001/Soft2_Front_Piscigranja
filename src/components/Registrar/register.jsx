@@ -11,6 +11,7 @@ function Register() {
   const [error, setError] = useState(null);
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const response = await fetch("http://127.0.0.1:8000/backend/register/", {
         method: 'POST',
@@ -24,20 +25,20 @@ function Register() {
           password: password
         })
       });
-      const data = await response.json();
-      console.log(data)
-      if(data.error===""){
-        const jsonData = JSON.stringify(data.restaurante);
-        sessionStorage.setItem('data', jsonData);
-        navigate('/2023-0-pw-entregable-2/bienvenida');
+
+      if (response.status === 201) {
+        // Registro exitoso, almacenar el correo en sessionStorage
+        sessionStorage.setItem('email', email);
+
+        // Redirigir al usuario a la página de inicio
+        navigate('/homepage');
+      } else {
+        const data = await response.json();
+        console.log(data);
+        setError("Sus credenciales son incorrectas");
       }
-      else{
-        setError("Sus credednciales son incorrectas")
-      }
-     
-      // redirigir al usuario a la página principal
     } catch (err) {
-      console.log("no ingreso")
+      console.log("Error en la solicitud:", err);
       setError(err.message);
     }
   }

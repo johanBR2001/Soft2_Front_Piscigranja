@@ -8,9 +8,10 @@ function Login() {
   const [error, setError] = useState(null);
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const response = await fetch("http://127.0.0.1:8000/backend/login/", {
-      method: 'POST',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
@@ -19,23 +20,30 @@ function Login() {
           password: password
         })
       });
-      const data = await response.json();
-      console.log(data)
-      if(data.error===""){
-        const jsonData = JSON.stringify(data.restaurante);
-        sessionStorage.setItem('data', jsonData);
-        navigate('/homepage');
+
+      if (response.status === 404) {
+        // El correo no existe, muestra un mensaje de error
+        setError("El correo no existe");
+      } else if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+        if (data.error === "") {
+          const jsonData = JSON.stringify(data.restaurante);
+          sessionStorage.setItem('data', jsonData);
+          navigate('/homepage');
+        } else {
+          setError("Sus credenciales son incorrectas");
+        }
+      } else {
+        // Manejar otros errores de la petición, si es necesario
+        setError("Error en la solicitud al servidor");
       }
-      else{
-        setError("Sus credednciales son incorrectas")
-      }
-     
-      // redirigir al usuario a la página principal
     } catch (err) {
-      console.log("no ingreso")
-      setError(err.message);
+      console.log("Error en la solicitud:", err);
+      setError("Error en la solicitud al servidor");
     }
   };
+
   return <div>
     <link rel="stylesheet" href="index.css" />
     <title>HASH TECHIE OFFICIAL</title>
