@@ -1,0 +1,67 @@
+/* .containerStyle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 70px;
+} */
+
+#linea {
+    border: 3px solid turquoise;
+    width: 100%;
+    height: 100%;
+}
+
+.vl {
+    border: 3px solid turquoise;
+    width: 5px;
+    height: 100%;
+}
+
+.scrollable-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.col-1 {
+    width: fit-content;
+}
+
+/* .col-6 {
+    display: inline-block;
+    float: none;
+}
+
+#scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+} */
+
+.card {
+    /* width: 500px; */
+    text-overflow: clip;
+}
+
+#titulo {
+    margin: 15px;
+
+}
+
+#logo {
+    max-width: 150px;
+    align-self: center;
+}
+
+#content {
+    margin: 10px;
+}
+
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.btn {
+    width: 90%;
+}
