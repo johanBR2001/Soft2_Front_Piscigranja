@@ -40,3 +40,22 @@
 #label{
   top: 20px;
 }
+
+
+#bg-container{
+  background-color: #e3f0f2;
+  border-radius: 16px 16px 0 0;
+}
+
+#bg-container2{
+  background-color: #e3f0f2;
+  border-radius: 0 0 16px 16px;
+}
+
+
+.row.sastifaccion_filtrado{
+  flex-wrap: wrap;
+}
+.card{
+  background-color: #b9e3eb;
+}
