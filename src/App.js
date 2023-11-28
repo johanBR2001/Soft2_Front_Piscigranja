@@ -14,6 +14,7 @@ import CodOlviContra from './components/OlvidasteContraseña/CodOlviContra';
 import EstadGeneral from './components/EstadisticasGenerales/EstadGeneral';
 import ResetContra from './components/OlvidasteContraseña/ResetContra';
 import Soporte from './components/Soporte/soporte';
+import ControlSensor from './components/Monitoreo/ControlSensores';
 const App = () => {
   return(
     <Router>
@@ -27,6 +28,8 @@ const App = () => {
     <Route path='/homepage/' element={<HomePage/>}/>
     <Route path='/estadisticas/' element={<EstadGeneral/>}/>
     <Route path='/soporte/' element={<Soporte/>}/>
+    <Route path='/Monitoreo/' element={<ControlSensor/>}/>
+
   </Routes>
   </Router>
   )

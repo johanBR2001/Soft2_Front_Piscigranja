@@ -1,0 +1,19 @@
+.auto-adjust {
+  height: 24px;
+  position: relative;
+  width: 134px;
+}
+
+.auto-adjust .auto-caption {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -1px;
+  white-space: nowrap;
+  width: 151px;
+}

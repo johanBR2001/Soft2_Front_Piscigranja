@@ -3,7 +3,8 @@ import { ChartPolar } from '../Charts/ChartPolar';
 import LinesChart from '../Charts/LinesChart';
 import '../css/estiloChartPolar.css';
 import NavBar from '../NavBar/navbar';
-
+import imagen from '../assets/img/smiley.png'
+import { BarChart } from '../Charts/BarChart';
 function EstadGeneral() {
     const [activeTab, setActiveTab] = useState("tab1");
     //  Funciones para realizar el cambio de tabs
@@ -65,11 +66,12 @@ function EstadGeneral() {
             <div class='row sastifaccion_filtrado' id='bg-container2'>
                 <div class='col-lg-4'>
                     <div class='card emociones'>
-                        HOLA
+                        <img src={imagen} alt="Descripción de la imagen" style={{ maxWidth: '300px' }} />
                     </div>
                 </div>
                 <div class='col-lg-8'>
                     <div class="card barras-filtro">
+                    <BarChart />
                         
                     </div>
                 </div>
