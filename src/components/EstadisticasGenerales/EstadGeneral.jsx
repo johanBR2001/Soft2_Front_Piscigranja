@@ -4,7 +4,8 @@ import LinesChart from '../Charts/LinesChart';
 import '../css/estiloChartPolar.css';
 import NavBar from '../NavBar/navbar';
 import imagen from '../assets/img/smiley.png'
-import { BarChart } from '../Charts/BarChart';
+import BarChart from '../Charts/BarChart';
+import PieChart from '../Charts/PieChart';
 function EstadGeneral() {
     const [activeTab, setActiveTab] = useState("tab1");
     //  Funciones para realizar el cambio de tabs
@@ -59,7 +60,7 @@ function EstadGeneral() {
                 </div>
                 <div class="col-lg-6 col-md-7 justify-content-center align-items-center" style={{ minHeight:"400px", minWidth:"400px", display: 'flex', justifyContent: 'center !important', alignItems: 'center !important' }}>
                     <div class='outlet'>
-                        {activeTab === "tab1" ? <ChartPolar /> : <LinesChart />}
+                        {activeTab === "tab1" ? <PieChart /> : <LinesChart />}
                     </div>
                 </div>
             </div>
@@ -71,7 +72,7 @@ function EstadGeneral() {
                 </div>
                 <div class='col-lg-8'>
                     <div class="card barras-filtro">
-                    <BarChart />
+                    <BarChart/>
                         
                     </div>
                 </div>

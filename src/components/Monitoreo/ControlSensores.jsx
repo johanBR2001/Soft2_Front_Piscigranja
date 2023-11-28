@@ -59,11 +59,12 @@ function ControlSensor() {
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </div>
-                        
-                        <div className="text-wrapper-2">2 h</div>
-                        <div className="text-wrapper-3">3 h</div>
-                        <div className="text-wrapper-4">4 h</div>
-                        <div className="text-wrapper-5">5 h</div>
+                        <div class='Horas'>
+                            <div className="text-wrapper-2">2 h</div>
+                            <div className="text-wrapper-3">3 h</div>
+                            <div className="text-wrapper-4">4 h</div>
+                            <div className="text-wrapper-5">5 h</div>
+                        </div>
                         <img src={imagen} alt="Descripción de la imagen" style={{ maxWidth: '600px' ,position: 'absolute',left: '-100px' }} />
                     
                     </div>
