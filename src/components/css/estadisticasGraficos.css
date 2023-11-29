@@ -1,0 +1,34 @@
+.card_barra {
+    background-color: #d3ebee;
+    border: 1px solid #d3ebee;
+    border-radius: 8px;
+    position: absolute;
+    right: 4%;
+    height: 350px;
+    width: 66%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top:8%;
+}
+
+.row.graficos{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.card_reaccion {
+    background-color: #d3ebee;
+    border: 1px solid #d3ebee;
+    border-radius: 8px;
+    position: absolute;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    left: 7%;
+    height: 350px;
+    top:8%;
+}
+
+
+.subtitulo{
+    padding-left: 13%;
+}

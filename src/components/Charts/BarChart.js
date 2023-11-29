@@ -87,3 +87,4 @@ const BarChart = ({ barData }) => {
 };
 
 export default BarChart;
+

@@ -1,0 +1,29 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd; /* Color del borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 300px; /* Ancho de la card */
+    height: 800px;
+
+  }
+  .user-picture {
+    background-color: white;
+    overflow: hidden;
+    object-fit: cover;
+    width: 15rem;
+    height: 15rem;
+    border: 4px solid #7cdacc;
+    border-radius: 999px;
+    display: flex;
+    
+    
+  }
+
