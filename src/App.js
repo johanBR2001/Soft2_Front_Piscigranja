@@ -16,6 +16,10 @@ import ResetContra from './components/OlvidasteContraseña/ResetContra';
 import Soporte from './components/Soporte/soporte';
 import ControlSensor from './components/Monitoreo/ControlSensores';
 import LinkedCharts from './components/Charts/GraficosDobles';
+// import Probando from './components/probando/probando';
+import Estadisticas from './components/probando/probando';
+
+
 import Register_ruc from './components/Registrar/register_ruc';
 import Configperfil from './components/Perfil/ConfigPerfil';
 const App = () => {
@@ -29,13 +33,13 @@ const App = () => {
     <Route path='/CodOlviContra' element={<CodOlviContra/>}/>
     <Route path='/ResetContra' element={<ResetContra/>}/>
     <Route path='/homepage/' element={<HomePage/>}/>
-    <Route path='/estadisticas/' element={<EstadGeneral/>}/>
+    {/* <Route path='/estadisticas/' element={<EstadGeneral/>}/> */}
     <Route path='/soporte/' element={<Soporte/>}/>
     <Route path='/Monitoreo/' element={<ControlSensor/>}/>
     <Route path='/grafico/' element={<LinkedCharts/>}/>
-    <Route path='/register_ruc/' element={<Register_ruc/>}/>
+    {/* <Route path='/probandoGrafico/' element={<Probando/>}/> */}
     <Route path='/configperfil/' element={<Configperfil/>}/>
-
+    <Route path='/estadisticas/' element={<Estadisticas/>}/>
   </Routes>
   </Router>
   )

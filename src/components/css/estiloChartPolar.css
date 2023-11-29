@@ -15,6 +15,9 @@
   width: 1000px;
 }
 
+
+
+
 .box .rectangle {
   margin-right: 50px;
   margin-left: 50px;
@@ -50,6 +53,7 @@
 #bg-container2{
   background-color: #e3f0f2;
   border-radius: 0 0 16px 16px;
+  height: 450px;
 }
 
 
