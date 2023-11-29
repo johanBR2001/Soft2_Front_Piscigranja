@@ -6,6 +6,7 @@ import NavBar from '../NavBar/navbar';
 import imagen from '../assets/img/smiley.png'
 import BarChart from '../Charts/BarChart';
 import PieChart from '../Charts/PieChart';
+import { Chart } from 'chart.js';
 function EstadGeneral() {
     const [activeTab, setActiveTab] = useState("tab1");
     //  Funciones para realizar el cambio de tabs
@@ -34,6 +35,10 @@ function EstadGeneral() {
             setActiveTab("tab2");
         }
     };
+    
+
+    
+    
 
     return (
         <div class="container">

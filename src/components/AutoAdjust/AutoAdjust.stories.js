@@ -13,4 +13,3 @@ export const Default = {
   },
 };
 
-export { AutoAdjust } from "./AutoAdjust";
