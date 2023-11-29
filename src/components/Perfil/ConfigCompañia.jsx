@@ -2,22 +2,35 @@ import React from "react";
 import "../css/Perfil.css";
 import NavBar from "../NavBar/navbar";
 
-export const Perfil = () => {
+function Perfil() {
   return (
     <div className="perfil">
       <div className="div">
-        <div className="text-wrapper">Perfil</div>
+        
         <div className="overlap">
           <img className="image" alt="Image" src="https://c.animaapp.com/svXnV8xI/img/image-69.png" />
-          <input className="rectangle" />
+          <div className="rectangle"> 
+                   <div className="ellipse"> </div>
+                 
+                  <div className="ellipse-3"> </div>
+
+
+
           <div className="text-wrapper-2">Alertas</div>
           <div className="text-wrapper-3">Configuraciòn</div>
           <div className="text-wrapper-4">Usuario 1</div>
           <div className="text-wrapper-5">Administrador</div>
-          <input className="rectangle-2" />
-          <div className="ellipse" />
-          <div className="ellipse-2" />
-          <div className="ellipse-3" />
+          
+                  
+
+       </div>
+       <div  className="rectangle-2">
+           </div>
+
+
+          
+                  
+
           <div className="text-wrapper-6">Datos Personales</div>
           <div className="text-wrapper-7">Nombre</div>
           <div className="text-wrapper-8">Usuario</div>
@@ -28,6 +41,8 @@ export const Perfil = () => {
           <div className="text-wrapper-13">Apellido</div>
           <div className="text-wrapper-14">Compañia</div>
           <div className="text-wrapper-15">Accesos</div>
+
+
           <img className="line" alt="Line" src="https://c.animaapp.com/svXnV8xI/img/line-33.svg" />
           <input className="rectangle-3" />
           <input className="rectangle-4" />
@@ -49,3 +64,5 @@ export const Perfil = () => {
     </div>
   );
 };
+
+export default Perfil
