@@ -20,6 +20,7 @@ import Probando from './components/probando/probando';
 
 
 
+import Register_ruc from './components/Registrar/register_ruc';
 const App = () => {
   return(
     <Router>
@@ -35,10 +36,7 @@ const App = () => {
     <Route path='/soporte/' element={<Soporte/>}/>
     <Route path='/Monitoreo/' element={<ControlSensor/>}/>
     <Route path='/grafico/' element={<LinkedCharts/>}/>
-    <Route path='/probandoGraficos/' element={<Probando/>}/>
-
-
-
+    <Route path='/probandoGrafico/' element={<Probando/>}/>
   </Routes>
   </Router>
   )

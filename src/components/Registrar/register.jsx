@@ -12,35 +12,14 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch("http://127.0.0.1:8000/backend/register/", {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          nombre: nombre,
-          apellido: apellido,
-          email: email,
-          password: password
-        })
-      });
-
-      if (response.status === 201) {
-        // Registro exitoso, almacenar el correo en sessionStorage
+    
+        sessionStorage.setItem('nombre', nombre);
+        sessionStorage.setItem('apellido', apellido);
         sessionStorage.setItem('email', email);
-
+        sessionStorage.setItem('password', password);
         // Redirigir al usuario a la página de inicio
-        navigate('/homepage');
-      } else {
-        const data = await response.json();
-        console.log(data);
-        setError("Sus credenciales son incorrectas");
-      }
-    } catch (err) {
-      console.log("Error en la solicitud:", err);
-      setError(err.message);
-    }
+        navigate('/register_ruc');
+     
   }
 
   return <div>

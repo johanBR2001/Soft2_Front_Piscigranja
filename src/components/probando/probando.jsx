@@ -162,7 +162,7 @@ const Probando = () => {
         </div>
       </div>
       <div className="row" id="bg-container2" style={{ height: "fit-content" }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', height: '800px', width: '400px' }}>
+      <div>
         <BarChart barChartRef={barChartRef} />
       </div>
       </div>
