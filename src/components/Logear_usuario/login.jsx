@@ -24,17 +24,23 @@ function Login() {
       if (response.status === 404) {
         // El correo no existe, muestra un mensaje de error
         setError("El correo no existe");
-      } else if (response.ok) {
+      } else if (response.status === 401 ){
+        // Manejar otros errores de la petición, si es necesario
+        console.log("Credenciales incorrectas");
+      }
+      else if (response.ok) {
         const data = await response.json();
         console.log(data);
-        if (data.error === "") {
+        if (data.error === "Inicio de sesión exitoso") {
           const jsonData = JSON.stringify(data.restaurante);
           sessionStorage.setItem('data', jsonData);
           navigate('/homepage');
-        } else {
+        } else if (data.error === "Credenciales incorrectas"){
           setError("Sus credenciales son incorrectas");
+          alert("Credenciales incorrectas");
         }
-      } else {
+      } 
+      else {
         // Manejar otros errores de la petición, si es necesario
         setError("Error en la solicitud al servidor");
       }
