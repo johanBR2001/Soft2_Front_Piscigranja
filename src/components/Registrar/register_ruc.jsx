@@ -77,8 +77,7 @@ function Register_ruc() {
 
       if (response.status === 201) {
         // Registro exitoso, almacenar el correo en sessionStorage
-        sessionStorage.setItem('email', email);
-
+        
         // Redirigir al usuario a la página de inicio
         navigate('/homepage');
       } else {

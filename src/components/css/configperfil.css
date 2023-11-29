@@ -14,5 +14,16 @@
     height: 800px;
 
   }
-
+  .user-picture {
+    background-color: white;
+    overflow: hidden;
+    object-fit: cover;
+    width: 15rem;
+    height: 15rem;
+    border: 4px solid #7cdacc;
+    border-radius: 999px;
+    display: flex;
+    
+    
+  }
 
