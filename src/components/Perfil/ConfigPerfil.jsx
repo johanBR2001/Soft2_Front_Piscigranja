@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom"
-<<<<<<< HEAD
-import '../css/ConfigPerfil.css'
-=======
 import '../css/configperfil.css'
->>>>>>> 5992fd7da2f7f9dbfb4b5722ff42e6deb73d110d
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import NavBar from '../NavBar/navbar';
