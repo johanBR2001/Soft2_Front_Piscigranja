@@ -16,6 +16,10 @@ import ResetContra from './components/OlvidasteContraseña/ResetContra';
 import Soporte from './components/Soporte/soporte';
 import ControlSensor from './components/Monitoreo/ControlSensores';
 import LinkedCharts from './components/Charts/GraficosDobles';
+import Probando from './components/probando/probando';
+
+
+
 const App = () => {
   return(
     <Router>
@@ -31,6 +35,9 @@ const App = () => {
     <Route path='/soporte/' element={<Soporte/>}/>
     <Route path='/Monitoreo/' element={<ControlSensor/>}/>
     <Route path='/grafico/' element={<LinkedCharts/>}/>
+    <Route path='/probandoGraficos/' element={<Probando/>}/>
+
+
 
   </Routes>
   </Router>
