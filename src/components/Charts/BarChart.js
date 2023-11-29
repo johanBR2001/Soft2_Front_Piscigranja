@@ -1,4 +1,4 @@
-/*import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 
 const BarChart = ({ barData }) => {
@@ -88,4 +88,3 @@ const BarChart = ({ barData }) => {
 
 export default BarChart;
 
-*/
