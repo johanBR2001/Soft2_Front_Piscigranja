@@ -17,6 +17,7 @@ import Soporte from './components/Soporte/soporte';
 import ControlSensor from './components/Monitoreo/ControlSensores';
 import LinkedCharts from './components/Charts/GraficosDobles';
 import Register_ruc from './components/Registrar/register_ruc';
+import Configperfil from './components/Perfil/ConfigPerfil';
 const App = () => {
   return(
     <Router>
@@ -33,6 +34,7 @@ const App = () => {
     <Route path='/Monitoreo/' element={<ControlSensor/>}/>
     <Route path='/grafico/' element={<LinkedCharts/>}/>
     <Route path='/register_ruc/' element={<Register_ruc/>}/>
+    <Route path='/configperfil/' element={<Configperfil/>}/>
 
   </Routes>
   </Router>

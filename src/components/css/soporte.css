@@ -65,3 +65,31 @@
 .btn {
     width: 90%;
 }
+
+.comentario {
+    width: 70%;
+    margin: auto;
+    margin-left: 2%;
+}
+
+#soporte {
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.container {
+    margin-bottom: 50px;
+}
+
+/* #navbar {
+    margin-bottom: 0px;
+} */
+
+/* a {
+    margin-bottom: 30px;
+}
+
+#fila_inferior {
+    margin-bottom: 40px;
+} */
