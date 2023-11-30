@@ -172,14 +172,14 @@ function Configperfil() {
           <div className="text-wrapper-10">Ciudad</div>
           <div className="text-wrapper-11">Pais</div>
           <div className="text-wrapper-12">Apellido</div>
-                        <input className="rectangle-3" type="text" value={compañia} onChange={(e) => setNombre(e.target.value)}/>
-          <input className="rectangle-4"  type="text" value={nruc} onChange={(e) => setApellido(e.target.value)}/>
-          <input className="rectangle-5" type="text" value={telefono} onChange={(e) => setTelefonopersonal(e.target.value)} />
-          <input className="rectangle-7" type="text" value={ciudad} onChange={(e) => setCiudadpersonal(e.target.value)}/>
-          <input className="rectangle-8" type="text" value={pais}onChange={(e) => setPaispersonal(e.target.value)}/>
-          <input className="rectangle-9"type="text" value={sede}onChange={(e) => setPaispersonal(e.target.value)} />
-          <input className="rectangle-10"  disabled/>
-          <button onClick={handleSubmit} className="text-wrapper-16">Actualizar</button></>}
+                        <input className="rectangle-3" type="text" disabled value={compañia} onChange={(e) => setNombre(e.target.value)}/>
+          <input className="rectangle-4"  type="text" disabled value={nruc} onChange={(e) => setApellido(e.target.value)}/>
+          <input className="rectangle-5" type="text" disabled value={telefono} onChange={(e) => setTelefonopersonal(e.target.value)} />
+          <input className="rectangle-7" type="text"disabled value={ciudad} onChange={(e) => setCiudadpersonal(e.target.value)}/>
+          <input className="rectangle-8" type="text" disabled value={pais}onChange={(e) => setPaispersonal(e.target.value)}/>
+          <input className="rectangle-9"type="text" disabled value={sede}onChange={(e) => setPaispersonal(e.target.value)} />
+          
+          </>}
                     </div>
           <img className="line" alt="Line" src="https://c.animaapp.com/svXnV8xI/img/line-33.svg" />
           
