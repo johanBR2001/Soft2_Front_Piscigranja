@@ -16,7 +16,7 @@ import ResetContra from './components/OlvidasteContraseña/ResetContra';
 import Soporte from './components/Soporte/soporte';
 import ControlSensor from './components/Monitoreo/ControlSensores';
 import LinkedCharts from './components/Charts/GraficosDobles';
-import Configperfil, { Perfil } from './components/Perfil/ConfigPerfil';
+import { Perfil } from './components/Perfil/ConfigCompañia';
 import Estadisticas from './components/probando/probando';
 import Register_ruc from './components/Registrar/register_ruc';
 
@@ -35,8 +35,10 @@ const App = () => {
     <Route path='/soporte/' element={<Soporte/>}/>
     <Route path='/Monitoreo/' element={<ControlSensor/>}/>
     <Route path='/grafico/' element={<LinkedCharts/>}/>
-    <Route path='/Perfil/' element={<Configperfil/>}/>
+    <Route path='/ConfPerfil/' element={<Configperfil/>}/>
+    <Route path='/Perfil/' element={<Perfil/>}/>
     <Route path='/estadisticas/' element={<Estadisticas/>}/>
+
   </Routes>
   </Router>
   )
