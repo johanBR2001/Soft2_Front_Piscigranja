@@ -35,6 +35,7 @@ function Login() {
           const jsonData = JSON.stringify(data.restaurante);
           sessionStorage.setItem('data', jsonData);
           console.log(jsonData)
+          navigate("/homepage")
         } else if (data.error === "Credenciales incorrectas"){
           setError("Sus credenciales son incorrectas");
           alert("Credenciales incorrectas");

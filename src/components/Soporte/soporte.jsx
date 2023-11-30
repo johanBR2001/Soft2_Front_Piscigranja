@@ -9,6 +9,8 @@ import imagen from '../assets/img/pez-payaso.png';
 function Soporte() {
   const [dataEstanques, setDataEstanques] = useState([]);
   const [error, setError] = useState(null);
+  const [estadoEntidad, setEstadoEntidad] = useState('');
+  const [comentarioEntidad, setComentarioEntidad] = useState('');
 
   const obtenerEstanquesPorUsuario = async () => {
     try {
@@ -46,7 +48,7 @@ function Soporte() {
   };
 
   useEffect(() => {
-    obtenerEstanquesPorUsuario(); // Llama a la función para obtener los estanques al cargar la página
+    obtenerEstanquesPorUsuario();
   }, []);
 
   const enviarSoporte = () => {
@@ -77,6 +79,32 @@ function Soporte() {
       .catch((error) => {
         console.log(error);
         alert('Ha ocurrido un error al enviar el ticket');
+      });
+  };
+
+  const enviarEstadoEntidad = () => {
+    const dataEntidad = {
+      estado: estadoEntidad,
+      comentario: comentarioEntidad,
+    };
+
+    fetch('http://127.0.0.1:8000/backend/enviar_correo_entidad/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataEntidad),
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert('Estado enviado con éxito a la entidad reguladora');
+        } else {
+          alert('Ha ocurrido un error al enviar el estado a la entidad reguladora');
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        alert('Ha ocurrido un error al enviar el estado a la entidad reguladora');
       });
   };
 
@@ -128,8 +156,8 @@ function Soporte() {
           </div>
           <div className="row">
             <label>Descripción</label>
-            <textarea name="" class="comentario" id="descripcion_soporte" cols="5" rows="5"></textarea>
-            <a id="soporte" href="#" class="btn btn-primary" onClick={enviarSoporte}>Generar ticket</a>
+            <textarea name="" className="comentario" id="descripcion_soporte" cols="5" rows="5"></textarea>
+            <a id="soporte" href="#" className="btn btn-primary" onClick={enviarSoporte}>Generar ticket</a>
           </div>
         </div>
         <div className="col-1">
@@ -141,18 +169,38 @@ function Soporte() {
           </div>
           <div className="row">
             <label>Estado de la piscigranja</label><br />
-            <input type="text" class="comentario" id="estado" />
+            <input
+              type="text"
+              className="comentario"
+              id="estado"
+              value={estadoEntidad}
+              onChange={(e) => setEstadoEntidad(e.target.value)}
+            />
           </div>
           <div className="row">
             <label>Comentario</label><br />
-            <textarea name="" class="comentario" id="comentario_entidad" cols="5" rows="5"></textarea>
-            <a id="soporte" href="#" class="btn btn-primary" onClick={enviarSoporte}>Enviar estado</a>
+            <textarea
+              name=""
+              className="comentario"
+              id="comentario_entidad"
+              cols="5"
+              rows="5"
+              value={comentarioEntidad}
+              onChange={(e) => setComentarioEntidad(e.target.value)}
+            ></textarea>
+            <a
+              id="soporte"
+              href="#"
+              className="btn btn-primary"
+              onClick={enviarEstadoEntidad}
+            >
+              Enviar estado
+            </a>
           </div>
         </div>
       </div>
     </div>
-
-    );
+  );
 }
 
 export default Soporte;
